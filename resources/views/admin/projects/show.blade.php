@@ -7,6 +7,7 @@
         <p>{{ $project->description }}</p>
         <a href="{{ $project->linkedin }}">check it on linkedin!</a>
         <a href="{{ $project->github }}">check it on Gitub!</a>
+        <p>{{ $project->type?->name }}</p>
         <img class="mt-5"src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->name }}">
     </div>
 @endsection

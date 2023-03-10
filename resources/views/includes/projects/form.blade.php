@@ -56,10 +56,20 @@
     </div>
 </div>
 
+<label for="type_id" class="form-label">types</label>
+<select class="form-select mb-4" name="type_id" id="type_id">
+    <option selected>Open this select menu</option>
+    <option value="">No Types</option>
+    @foreach ($types as $type)
+        <option value="{{ $type->id }}">{{ $type->name }}</option>
+    @endforeach
+</select>
+
+
 
 <div class="d-flex justify-content-between">
     <div>
-        <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary mt-3">Back</a>
+        <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Back</a>
     </div>
     <div class="mb-3">
         <button class="btn btn-small btn-success" type="submit">Submit</button>
