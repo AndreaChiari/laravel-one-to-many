@@ -58,7 +58,6 @@
 
 <label for="type_id" class="form-label">types</label>
 <select class="form-select mb-4" name="type_id" id="type_id">
-    <option selected>Open this select menu</option>
     <option value="">No Types</option>
     @foreach ($types as $type)
         <option value="{{ $type->id }}">{{ $type->name }}</option>

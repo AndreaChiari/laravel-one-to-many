@@ -74,12 +74,13 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $data = $request->all();
+
         if (array_key_exists('image', $data)) {
             if ($project->image) Storage::delete($project->image);
             $image_url = Storage::put('projects', $data['image']);
             $data['image'] = $image_url;
         }
-
+        $data['type_id'] = intval($data['type_id']);
         $project->update($data);
         return to_route('admin.projects.show', $project->id);
     }

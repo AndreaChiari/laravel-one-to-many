@@ -20,6 +20,7 @@ class ProjectSeeder extends Seeder
             $project->description = $faker->paragraphs(6, true);
             $project->linkedin = "https://www.linkedin.com/in/andrea-chiari-55b9bb24a/";
             $project->github = "https://github.com/AndreaChiari";
+
             $project->save();
         }
     }
